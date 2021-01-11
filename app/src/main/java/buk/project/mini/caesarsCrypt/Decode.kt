@@ -7,13 +7,13 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 
 class Decode : AppCompatActivity() {
-    var keyNumber: NumberPicker? = null
-    var editDecrypt: EditText? = null
-    var btnDecrypt: Button? = null
-    var btnClearDecrypt: Button? = null
-    var txtDecrypt: TextView? = null
-    private var space: String? = null
-    var decrypt: String? = null
+    lateinit var keyNumber: NumberPicker
+    lateinit var editDecrypt: EditText
+    lateinit var btnDecrypt: Button
+    lateinit var btnClearDecrypt: Button
+    lateinit var txtDecrypt: TextView
+    private lateinit var space: String
+    lateinit var decrypt: String
     var shiftkey = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,9 +25,9 @@ class Decode : AppCompatActivity() {
         btnClearDecrypt = findViewById<View>(R.id.btnDecryptClear) as Button
         txtDecrypt = findViewById<View>(R.id.textViewDecrypt) as TextView
         keyNumber = findViewById<View>(R.id.numberPickerDecrypt) as NumberPicker
-        keyNumber!!.maxValue = 256
-        keyNumber!!.minValue = 1
-        keyNumber!!.value = 1
+        keyNumber.maxValue = 256
+        keyNumber.minValue = 1
+        keyNumber.value = 1
         decrypt()
         clearDecode()
     }
@@ -38,23 +38,23 @@ class Decode : AppCompatActivity() {
 
     private fun decodeCaesar() {
         space = ""
-        shiftkey = keyNumber!!.value
-        decrypt = editDecrypt!!.text.toString()
-        for (element in decrypt!!) {
+        shiftkey = keyNumber.value
+        decrypt = editDecrypt.text.toString()
+        for (element in decrypt) {
             var d = element.toInt()
             d = (d - shiftkey) % 256
             if (d < 0) d += 256
             space += d.toChar()
         }
-        txtDecrypt!!.visibility = View.VISIBLE
-        txtDecrypt!!.text = space
+        txtDecrypt.visibility = View.VISIBLE
+        txtDecrypt.text = space
     }
 
     private fun clearDecode() {
-        btnClearDecrypt!!.setOnClickListener {
-            editDecrypt!!.setText(" ")
-            txtDecrypt!!.text = " "
-            keyNumber!!.value = 1
+        btnClearDecrypt.setOnClickListener {
+            editDecrypt.setText(" ")
+            txtDecrypt.text = " "
+            keyNumber.value = 1
         }
     }
 

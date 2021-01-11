@@ -7,8 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context="buk.project.mini.hicodders.buk.project.mini.caesarsCrypt.Encode">
+    android:orientation="vertical">
 
     <EditText
         android:layout_width="match_parent"
@@ -17,23 +16,12 @@
         android:inputType="textMultiLine"
         android:hint="Enter Text to Decrypt"
         android:ems="10"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="41dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginTop="41dp"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="#019aff"
-        android:id="@+id/scrollView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_above="@+id/numberPickerencrypt"
-        android:layout_below="@+id/editTextEncrypt"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:id="@+id/scrollView">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,19 +30,13 @@
             android:visibility="invisible"
             android:textColor="#ffffff"
             android:id="@+id/textViewDecrypt"
-            android:textIsSelectable="true"
-            android:layout_alignTop="@+id/scrollView"
-            android:layout_toLeftOf="@+id/buttonEncrypt"
-            android:layout_toStartOf="@+id/buttonEncrypt" />
+            android:textIsSelectable="true"/>
 
     </ScrollView>
     <NumberPicker
         android:layout_width="50dp"
         android:layout_height="120dp"
-        android:id="@+id/numberPickerDecrypt"
-        android:layout_alignBottom="@+id/buttonDecrypt"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/numberPickerDecrypt"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,7 +53,6 @@
             android:elevation="200dp"
             android:textSize="20sp"
             android:id="@+id/buttonDecrypt"
-            android:layout_marginLeft="41dp"
             android:layout_marginStart="41dp"/>
 
 
@@ -86,17 +67,8 @@
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:id="@+id/btnDecryptClear"
-            android:layout_alignParentBottom="true"
-            android:layout_toRightOf="@+id/buttonEncrypt"
-            android:layout_toEndOf="@+id/buttonEncrypt"
-            android:layout_marginLeft="41dp"
             android:layout_marginStart="41dp"
             android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
-
-
-
-
-
 </LinearLayout>

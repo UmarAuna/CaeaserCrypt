@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="buk.project.mini.caesarsCrypt.About_Ceasars">
+    tools:context="buk.project.mini.caesarsCrypt.AboutCaesar">
 
     <ScrollView
         android:layout_width="match_parent"

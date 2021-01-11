@@ -14,7 +14,7 @@
         android:layout_height="100dp"
         android:id="@+id/editTextEncrypt"
         android:inputType="textMultiLine"
-        android:hint="Enter Text to Encrypt"
+        android:hint="@string/enter_text_to_encrypt"
         android:ems="10"
         android:layout_marginTop="41dp" />
     <ScrollView
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Display"
+            android:text="@string/display"
             android:visibility="invisible"
             android:textColor="#ffffff"
             android:id="@+id/textViewEncrypt"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
-        android:text="Encryt"
+        android:text="@string/encrypt"
         android:textColor="#ffffff"
         android:background="#3b3b3b"
         android:elevation="200dp"
@@ -59,7 +59,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clear"
+        android:text="@string/clear"
         android:textColor="#ffffff"
         android:background="#3b3b3b"
         android:elevation="20dp"

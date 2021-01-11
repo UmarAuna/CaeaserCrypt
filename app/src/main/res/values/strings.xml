@@ -16,4 +16,12 @@
 
         "The Vigenère cipher uses a Caesar cipher with a different shift at each position in the text; the value of the shift is defined using a repeating keyword. If the keyword is as long as the message, chosen random, never becomes known to anyone else, and is never reused, this is the one-time pad cipher, proven unbreakable. The conditions are so difficult they are, in practical effect, never achieved. Keywords shorter than the message (e.g., "Complete Victory" used by the Confederacy during the American Civil War), introduce a cyclic pattern that might be detected with a statistically advanced version of frequency analysis."
     </string>
+    <string name="julius_caesar">Julius Caesar</string>
+    <string name="history_heading">HISTORY</string>
+    <string name="enter_text_to_decrypt">Enter Text to Decrypt</string>
+    <string name="display">Display</string>
+    <string name="clear">Clear</string>
+    <string name="enter_text_to_encrypt">Enter Text to Encrypt</string>
+    <string name="encrypt">Encrypt</string>
+    <string name="decrypt">Decrypt</string>
 </resources>

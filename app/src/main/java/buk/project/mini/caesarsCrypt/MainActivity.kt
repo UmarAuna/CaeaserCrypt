@@ -40,14 +40,14 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if (id == R.id.action_settings) {
-            val alertbox = AlertDialog.Builder(this)
-            alertbox.setTitle("caesarsCrypt")
-            alertbox.setIcon(R.drawable.caesar)
-            alertbox.setMessage("My Name is Umar Saidu Auna and I Love to Program")
-            alertbox.setCancelable(false)
-            alertbox.setNeutralButton(" ") { _, _ -> }
-            alertbox.setNegativeButton("Close", null)
-            alertbox.show()
+            val alertBox = AlertDialog.Builder(this)
+            alertBox.setTitle("caesarsCrypt")
+            alertBox.setIcon(R.drawable.caesar)
+            alertBox.setMessage("Version 1.0")
+            alertBox.setCancelable(true)
+            alertBox.setNeutralButton(" ") { _, _ -> }
+            alertBox.setNegativeButton("Close", null)
+            alertBox.show()
             return true
         }
         return super.onOptionsItemSelected(item)

@@ -19,6 +19,7 @@ class Encode : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_encode)
+        title = getString(R.string.encrypt)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         editEncrypt = findViewById(R.id.editTextEncrypt)
         btnEncrypt = findViewById(R.id.buttonEncrypt)

@@ -19,6 +19,7 @@ class Decode : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_decode)
+        title = getString(R.string.decrypt)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         editDecrypt  = findViewById(R.id.editTextDecrypt)
         btnDecrypt = findViewById(R.id.buttonDecrypt)

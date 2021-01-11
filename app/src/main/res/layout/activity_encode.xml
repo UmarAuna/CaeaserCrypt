@@ -20,11 +20,12 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#019aff"
+        android:background="@color/colorPrimary"
         android:id="@+id/scrollView">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/display"
             android:visibility="invisible"
@@ -45,11 +46,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
+        style="@style/PrimaryButton"
         android:text="@string/encrypt"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:textAllCaps="false"
         android:textColor="#ffffff"
-        android:background="#3b3b3b"
         android:elevation="200dp"
         android:textSize="20sp"
         android:id="@+id/buttonEncrypt"
@@ -59,13 +61,14 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/PrimaryButton"
         android:text="@string/clear"
         android:textColor="#ffffff"
-        android:background="#3b3b3b"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
         android:elevation="20dp"
         android:textSize="20sp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
+        android:textAllCaps="false"
         android:id="@+id/btnEncryptClear"
         android:layout_marginStart="41dp"
         android:layout_gravity="center_horizontal" />

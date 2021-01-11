@@ -12,20 +12,25 @@ import buk.project.mini.caesarsCrypt.Encode
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val btnEncode: Button = findViewById(R.id.btnNxtEncode)
         val btnDecode: Button = findViewById(R.id.btnNxtDecode)
         val fab: FloatingActionButton = findViewById(R.id.fab)
+
         fab.setOnClickListener {
             val i = Intent(this@MainActivity, AboutCaesar::class.java)
             startActivity(i)
         }
+
         btnEncode.setOnClickListener {
             val nextEncode = Intent(this@MainActivity, Encode::class.java)
             startActivity(nextEncode)
         }
+
         btnDecode.setOnClickListener {
             val nextDecode = Intent(this@MainActivity, Decode::class.java)
             startActivity(nextDecode)

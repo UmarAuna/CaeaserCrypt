@@ -19,12 +19,12 @@ class Encode : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_encode)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        editEncrypt = findViewById<View>(R.id.editTextEncrypt) as EditText
-        btnEncrypt = findViewById<View>(R.id.buttonEncrypt) as Button
-        btnClearEncrypt = findViewById<View>(R.id.btnEncryptClear) as Button
-        txtEncrypt = findViewById<View>(R.id.textViewEncrypt) as TextView
-        keyNumber = findViewById<View>(R.id.numberPickerencrypt) as NumberPicker
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        editEncrypt = findViewById(R.id.editTextEncrypt)
+        btnEncrypt = findViewById(R.id.buttonEncrypt)
+        btnClearEncrypt = findViewById(R.id.btnEncryptClear)
+        txtEncrypt = findViewById(R.id.textViewEncrypt)
+        keyNumber = findViewById(R.id.numberPickerencrypt)
         keyNumber.maxValue = 256
         keyNumber.minValue = 1
         keyNumber.value = 1

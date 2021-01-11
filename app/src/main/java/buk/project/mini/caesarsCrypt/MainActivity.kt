@@ -15,9 +15,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val btnEncode = findViewById<View>(R.id.btnNxtEncode) as Button
-        val btnDecode = findViewById<View>(R.id.btnNxtDecode) as Button
-        val fab = findViewById<View>(R.id.fab) as FloatingActionButton
+        val btnEncode: Button = findViewById(R.id.btnNxtEncode)
+        val btnDecode: Button = findViewById(R.id.btnNxtDecode)
+        val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener {
             val i = Intent(this@MainActivity, AboutCaesar::class.java)
             startActivity(i)

@@ -19,12 +19,12 @@ class Decode : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_decode)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        editDecrypt = findViewById<View>(R.id.editTextDecrypt) as EditText
-        btnDecrypt = findViewById<View>(R.id.buttonDecrypt) as Button
-        btnClearDecrypt = findViewById<View>(R.id.btnDecryptClear) as Button
-        txtDecrypt = findViewById<View>(R.id.textViewDecrypt) as TextView
-        keyNumber = findViewById<View>(R.id.numberPickerDecrypt) as NumberPicker
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        editDecrypt  = findViewById(R.id.editTextDecrypt)
+        btnDecrypt = findViewById(R.id.buttonDecrypt)
+        btnClearDecrypt = findViewById(R.id.btnDecryptClear)
+        txtDecrypt = findViewById(R.id.textViewDecrypt)
+        keyNumber = findViewById(R.id.numberPickerDecrypt)
         keyNumber.maxValue = 256
         keyNumber.minValue = 1
         keyNumber.value = 1
@@ -33,7 +33,7 @@ class Decode : AppCompatActivity() {
     }
 
     private fun decrypt() {
-        btnDecrypt!!.setOnClickListener { decodeCaesar() }
+        btnDecrypt.setOnClickListener { decodeCaesar() }
     }
 
     private fun decodeCaesar() {

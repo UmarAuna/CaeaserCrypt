@@ -18,10 +18,13 @@
     </string>
     <string name="julius_caesar">Julius Caesar</string>
     <string name="history_heading">HISTORY</string>
-    <string name="enter_text_to_decrypt">Enter Text to Decrypt</string>
+    <string name="enter_text_to_decrypt">Enter encrypted message to read</string>
     <string name="display">Display</string>
     <string name="clear">Clear</string>
-    <string name="enter_text_to_encrypt">Enter Text to Encrypt</string>
+    <string name="enter_text_to_encrypt">Enter message to hide</string>
     <string name="encrypt">Encrypt</string>
     <string name="decrypt">Decrypt</string>
+    <string name="select_key">Select Key</string>
+    <string name="encrypted_message">Encrypted Message</string>
+    <string name="decrypted_message">Decrypted Message</string>
 </resources>

@@ -1,77 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:id="@+id/editTextDecrypt"
-        android:inputType="textMultiLine"
-        android:hint="@string/enter_text_to_decrypt"
-        android:ems="10"
-        android:layout_marginTop="41dp"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/colorPrimary"
-        android:id="@+id/scrollView">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/display"
-            android:visibility="invisible"
-            android:textColor="#ffffff"
-            android:id="@+id/textViewDecrypt"
-            android:textIsSelectable="true"/>
 
-    </ScrollView>
-    <NumberPicker
-        android:layout_width="50dp"
-        android:layout_height="120dp"
-        android:id="@+id/numberPickerDecrypt"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        <EditText
+            android:id="@+id/editTextDecrypt"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangle"
+            android:ems="20"
+            android:hint="@string/enter_text_to_decrypt"
+            android:inputType="textMultiLine"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
+            android:id="@+id/buttonDecrypt"
+            style="@style/PrimaryButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/PrimaryButton"
+            android:layout_marginTop="50dp"
+            android:elevation="200dp"
             android:paddingStart="30dp"
             android:paddingEnd="30dp"
             android:text="@string/decrypt"
-            android:textColor="#ffffff"
             android:textAllCaps="false"
-            android:elevation="200dp"
-            android:textSize="20sp"
-            android:id="@+id/buttonDecrypt"
-            android:layout_marginStart="41dp"/>
-
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/btnDecryptClear"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDecrypt" />
 
         <Button
+            android:id="@+id/btnDecryptClear"
+            style="@style/PrimaryButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/PrimaryButton"
+            android:layout_gravity="center_horizontal"
+            android:elevation="20dp"
             android:paddingStart="30dp"
             android:paddingEnd="30dp"
             android:text="@string/clear"
-            android:textColor="#ffffff"
             android:textAllCaps="false"
-            android:elevation="20dp"
-            android:textSize="20sp"
-            android:id="@+id/btnDecryptClear"
-            android:layout_marginStart="41dp"
-            android:layout_gravity="center_horizontal" />
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/numberPickerDecrypt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonDecrypt"
+            app:layout_constraintTop_toTopOf="@+id/buttonDecrypt" />
 
-    </LinearLayout>
-</LinearLayout>
+        <Button
+            android:id="@+id/btnPasteDecrypt"
+            style="@style/PrimaryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="20dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="Paste"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView"
+            app:layout_constraintEnd_toEndOf="@+id/buttonDecrypt"
+            app:layout_constraintStart_toStartOf="@+id/buttonDecrypt"
+            app:layout_constraintTop_toBottomOf="@+id/buttonDecrypt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textViewSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_key"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorPrimary"
+            android:textIsSelectable="true"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/numberPickerDecrypt"
+            app:layout_constraintEnd_toEndOf="@+id/numberPickerDecrypt"
+            app:layout_constraintStart_toStartOf="@+id/numberPickerDecrypt" />
+
+        <NumberPicker
+            android:id="@+id/numberPickerDecrypt"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnDecryptClear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnDecryptClear" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/numberPickerDecrypt"
+            tools:layout_editor_absoluteX="6dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/primary_background"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:id="@+id/textViewMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/decrypted_message"
+                    android:textStyle="bold"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ffffff"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewDecrypt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ffffff"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewMessage"
+                    tools:text="@string/display" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/copyClipboardDecrypt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/content_copy"
+                    app:layout_anchorGravity="bottom|right|end"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/shareOthersDecrypt"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDecrypt" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/shareOthersDecrypt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginBottom="1dp"
+                    android:src="@drawable/share_content"
+                    app:layout_anchorGravity="bottom|right|end"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/copyClipboardDecrypt" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

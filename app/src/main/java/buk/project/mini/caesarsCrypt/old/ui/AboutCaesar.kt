@@ -1,8 +1,9 @@
-package buk.project.mini.caesarsCrypt
+package buk.project.mini.caesarsCrypt.old.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import buk.project.mini.caesarsCrypt.R
 
 class AboutCaesar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -8,16 +8,22 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.splashscreen.SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Encode"/>
-        <activity android:name=".Decode" />
-        <activity android:name=".AboutCaesar" />
+        <activity
+            android:name=".old.ui.MainActivity"
+            android:label="@string/title_activity_main2" />
+        <activity android:name=".ui.MainActivity2">
+        </activity>
+        <activity android:name=".old.ui.Encode" />
+        <activity android:name=".old.ui.Decode" />
+        <activity android:name=".old.ui.AboutCaesar" />
     </application>
 
 </manifest>

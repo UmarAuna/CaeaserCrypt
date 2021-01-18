@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="buk.project.mini.caesarsCrypt.MainActivity"
+    tools:context="buk.project.mini.caesarsCrypt.old.ui.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <Button

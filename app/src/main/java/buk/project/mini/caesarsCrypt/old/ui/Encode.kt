@@ -1,4 +1,4 @@
-package buk.project.mini.caesarsCrypt
+package buk.project.mini.caesarsCrypt.old.ui
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import buk.project.mini.caesarsCrypt.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Encode : AppCompatActivity() {

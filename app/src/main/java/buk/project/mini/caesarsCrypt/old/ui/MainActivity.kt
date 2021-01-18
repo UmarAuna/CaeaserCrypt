@@ -1,14 +1,13 @@
-package buk.project.mini.caesarsCrypt
+package buk.project.mini.caesarsCrypt.old.ui
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import buk.project.mini.caesarsCrypt.Encode
+import buk.project.mini.caesarsCrypt.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {

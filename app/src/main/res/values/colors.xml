@@ -6,7 +6,8 @@
     <color name="white">#ffffff</color>
     <color name="new_primary_color_disabled">#e1e3e7</color>
     <color name="new_secondary_color">#33475b</color>
-    <color name="new_primary_color">#35cc61</color>
+    <color name="new_primary_color_encrypt">#35cc61</color>
+    <color name="new_primary_color_decrypt">#F44336</color>
 
     <color name="grey">#3e3e3e</color>
 </resources>

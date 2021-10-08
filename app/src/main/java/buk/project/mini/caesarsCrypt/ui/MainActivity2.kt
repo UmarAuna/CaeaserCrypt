@@ -4,17 +4,17 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import buk.project.mini.caesarsCrypt.R
 import buk.project.mini.caesarsCrypt.ui.decrpytion.DecryptionFragment
 import buk.project.mini.caesarsCrypt.ui.encryption.EncryptionFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity2 : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-        when(item.itemId){
+        when (item.itemId) {
             R.id.navigation_encryption -> {
                 val encryptionFragment = EncryptionFragment.newInstance()
                 openFragment(encryptionFragment)
@@ -32,7 +32,6 @@ class MainActivity2 : AppCompatActivity() {
             }*/
         }
         false
-
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,8 +43,6 @@ class MainActivity2 : AppCompatActivity() {
         transaction.replace(R.id.container, encryptionFragment, EncryptionFragment::class.java.name)
         transaction.commit()
         bottomNav.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-
-
     }
     private fun openFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()

@@ -11,8 +11,8 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import buk.project.mini.caesarsCrypt.ui.MainActivity2
 import buk.project.mini.caesarsCrypt.R
+import buk.project.mini.caesarsCrypt.ui.MainActivity2
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class DecryptionFragment : Fragment() {
@@ -34,16 +34,16 @@ class DecryptionFragment : Fragment() {
     private var shiftKey = 0
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         mainActivity = this.activity as MainActivity2
         decryptionViewModel =
-                ViewModelProvider(this).get(DecryptionViewModel::class.java)
+            ViewModelProvider(this).get(DecryptionViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_decryption, container, false)
 
-        editDecrypt  = root.findViewById(R.id.editTextDecrypt)
+        editDecrypt = root.findViewById(R.id.editTextDecrypt)
         btnDecrypt = root.findViewById(R.id.buttonDecrypt)
         btnClearDecrypt = root.findViewById(R.id.btnDecryptClear)
         txtDecrypt = root.findViewById(R.id.textViewDecrypt)
@@ -51,18 +51,18 @@ class DecryptionFragment : Fragment() {
         btnShare = root.findViewById(R.id.shareOthersDecrypt)
         btnCopy = root.findViewById(R.id.copyClipboardDecrypt)
         btnPaste = root.findViewById(R.id.btnPasteDecrypt)
-        keyNumber.maxValue = 256
+        keyNumber.maxValue = 156
         keyNumber.minValue = 1
         keyNumber.value = 1
 
-        decryptionViewModel.text.observe(viewLifecycleOwner, {
-            //mainActivity.supportActionBar?.title = it
-        })
+        decryptionViewModel.text.observe(viewLifecycleOwner) {
+            // mainActivity.supportActionBar?.title = it
+        }
         return root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         decrypt()
         clearDecode()
@@ -80,7 +80,6 @@ class DecryptionFragment : Fragment() {
             clipData = ClipData.newPlainText("text", textCopy)
             clipboardManager.setPrimaryClip(clipData)
             Toast.makeText(context, "Text copied to clipboard", Toast.LENGTH_LONG).show()
-
         }
 
         btnShare.setOnClickListener {
@@ -91,7 +90,6 @@ class DecryptionFragment : Fragment() {
             shareIntent.type = "text/plain"
             shareIntent.putExtra(Intent.EXTRA_TEXT, shareText)
             startActivity(Intent.createChooser(shareIntent, "Share via"))
-
         }
     }
 
@@ -120,7 +118,6 @@ class DecryptionFragment : Fragment() {
             keyNumber.value = 1
         }
     }
-
 
     companion object {
         fun newInstance(): DecryptionFragment = DecryptionFragment()

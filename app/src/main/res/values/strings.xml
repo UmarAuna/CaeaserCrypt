@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ɓoye</string>
+    <string name="app_name">boye</string>
     <string name="action_settings">About</string>
     <string name="history">
         "The Caesar cipher is named after Julius Caesar, who, according to Suetonius, used it with a shift of three to protect messages of military significance. While Caesar's was the first recorded use of this scheme, other substitution ciphers are known to have been used earlier.\n\n"
@@ -31,4 +31,8 @@
     <string name="title_home">Encryption</string>
     <string name="title_dashboard">Decryption</string>
     <string name="title_notifications">About</string>
+    <string name="boye_1_0_0">ɓoye 1.0.0</string>
+    <string name="boye">ɓoye</string>
+    <string name="paste">Paste</string>
+    <string name="boye_details">ɓoye is an Android app that helps you encrypt, decrypt and share your text using Caeser Cipher.</string>
 </resources>

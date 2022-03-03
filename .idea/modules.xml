@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CaeaserCrypt.iml" filepath="$PROJECT_DIR$/.idea/CaeaserCrypt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CaeaserCrypt.iml" filepath="$PROJECT_DIR$/.idea/modules/CaeaserCrypt.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CaeaserCrypt.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CaeaserCrypt.app.iml" />
     </modules>
   </component>

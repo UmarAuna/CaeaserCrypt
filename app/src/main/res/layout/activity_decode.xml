@@ -72,7 +72,7 @@
             android:elevation="20dp"
             android:paddingStart="30dp"
             android:paddingEnd="30dp"
-            android:text="Paste"
+            android:text="@string/paste"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/scrollView"
             app:layout_constraintEnd_toEndOf="@+id/buttonDecrypt"

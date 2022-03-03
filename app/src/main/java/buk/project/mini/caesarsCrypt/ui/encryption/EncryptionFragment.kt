@@ -11,8 +11,8 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import buk.project.mini.caesarsCrypt.ui.MainActivity2
 import buk.project.mini.caesarsCrypt.R
+import buk.project.mini.caesarsCrypt.ui.MainActivity2
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class EncryptionFragment : Fragment() {
@@ -34,12 +34,12 @@ class EncryptionFragment : Fragment() {
     private var shiftKey = 0
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         mainActivity = this.activity as MainActivity2
-        encryptionViewModel = ViewModelProvider(this).get(EncryptionViewModel::class.java)
+        encryptionViewModel = ViewModelProvider(this)[EncryptionViewModel::class.java]
         val root = inflater.inflate(R.layout.fragment_encryption, container, false)
         editEncrypt = root.findViewById(R.id.editTextEncrypt)
         btnEncrypt = root.findViewById(R.id.buttonEncrypt)
@@ -49,22 +49,22 @@ class EncryptionFragment : Fragment() {
         btnShare = root.findViewById(R.id.shareOthers)
         btnCopy = root.findViewById(R.id.copyClipboard)
         btnPaste = root.findViewById(R.id.btnPaste)
-        keyNumber.maxValue = 256
+        keyNumber.maxValue = 156
         keyNumber.minValue = 1
         keyNumber.value = 1
 
-        encryptionViewModel.text.observe(viewLifecycleOwner, {
-            //mainActivity.supportActionBar?.title = it
-        })
+        encryptionViewModel.text.observe(viewLifecycleOwner) {
+            // mainActivity.supportActionBar?.title = it
+        }
         return root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         encrypt()
         clearEncode()
-        clipboardManager =  activity?.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        clipboardManager = activity?.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
 
         btnPaste.setOnClickListener {
             val paste = clipboardManager.primaryClip
@@ -78,7 +78,6 @@ class EncryptionFragment : Fragment() {
             clipData = ClipData.newPlainText("text", textCopy)
             clipboardManager.setPrimaryClip(clipData)
             Toast.makeText(context, "Text copied to clipboard", Toast.LENGTH_LONG).show()
-
         }
 
         btnShare.setOnClickListener {
@@ -89,7 +88,6 @@ class EncryptionFragment : Fragment() {
             shareIntent.type = "text/plain"
             shareIntent.putExtra(Intent.EXTRA_TEXT, shareText)
             startActivity(Intent.createChooser(shareIntent, "Share via"))
-
         }
     }
 

@@ -59,9 +59,9 @@ class MainActivity2 : AppCompatActivity() {
         val id = item.itemId
         if (id == R.id.action_settings) {
             val alertBox = AlertDialog.Builder(this)
-            alertBox.setTitle("ɓoye")
-            alertBox.setIcon(R.drawable.caesar)
-            alertBox.setMessage("Version 0.0.1")
+            alertBox.setTitle(getString(R.string.boye))
+            alertBox.setIcon(R.drawable.app_icon)
+            alertBox.setMessage(getString(R.string.boye_details))
             alertBox.setCancelable(true)
             alertBox.setNeutralButton(" ") { _, _ -> }
             alertBox.setNegativeButton("Close", null)

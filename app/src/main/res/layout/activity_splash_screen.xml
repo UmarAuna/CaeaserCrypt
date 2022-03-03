@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_encrypted" />
+        app:srcCompat="@drawable/app_icon" />
 
     <TextView
         android:id="@+id/textView"
@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="240dp"
         android:fontFamily="sans-serif-condensed-light"
-        android:text="ɓoye 0.0.1"
-        android:textSize="18dp"
+        android:text="@string/boye_1_0_0"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
